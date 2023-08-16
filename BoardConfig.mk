@@ -19,6 +19,7 @@ TARGET_KERNEL_CONFIG := munch_defconfig
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_munch
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_munch
 TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_munch
 
 # Properties
