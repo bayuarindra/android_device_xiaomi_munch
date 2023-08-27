@@ -13,7 +13,7 @@ $(call inherit-product, device/xiaomi/sm8250-common/kona.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-arrow
+    $(LOCAL_PATH)/overlay-superior
 
 PRODUCT_PACKAGES += \
     MunchCNSettingsProviderOverlay \
@@ -54,6 +54,6 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-
+    
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/munch/munch-vendor.mk)
