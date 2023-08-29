@@ -366,10 +366,15 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+# NFC
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.boot.hardware.sku=munch
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-aosp
+
 
 PRODUCT_PACKAGES += \
     MunchCNSettingsProviderOverlay \
@@ -377,7 +382,8 @@ PRODUCT_PACKAGES += \
     MunchGLOBALSettingsProviderOverlay \
     MunchGLOBALWifiOverlay \
     MunchINDIASettingsProviderOverlay \
-    MunchINDIAWifiOverlay
+    MunchINDIAWifiOverlay \
+    MunchNfcOverlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(LOCAL_PATH)/overlay/packages/apps/CarrierConfig
