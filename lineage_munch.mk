@@ -22,6 +22,10 @@ EVO_BUILD_TYPE := COMMUNITY
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_BOOT_ANIMATION_RES := 1080
 
+# MI Cam
+TARGET_USES_MIUI_CAMERA := true
+TARGET_INCLUDES_MIUI_CAMERA := true
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_munch
 PRODUCT_DEVICE := munch
