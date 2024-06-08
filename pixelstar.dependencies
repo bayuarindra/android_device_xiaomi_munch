@@ -25,6 +25,18 @@
     },
     {
         "remote": "github",
+        "repository": "Mudit200408/android_hardware_dolby",
+        "target_path": "hardware/dolby",
+        "branch": "14"
+    },
+    {
+        "remote": "github",
+        "repository": "TheParasiteProject/packages_apps_KProfiles",
+        "target_path": "packages/apps/KProfiles",
+        "branch": "main"
+    },
+    {
+        "remote": "github",
         "repository": "Mudit200408/hardware_xiaomi",
         "target_path": "hardware/xiaomi",
         "branch": "14"
