@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021-2024 The LineageOS Project
+# Copyright (C) 2021 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -8,31 +8,31 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# Inherit some common lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
 # Inherit from munch device
 $(call inherit-product, device/xiaomi/munch/device.mk)
 
-# Inherit some common Evolution X stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-
-# Inherit extra stuff
-$(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
-
-# Evolution-X Flags
-EVO_BUILD_TYPE := COMMUNITY
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_BOOT_ANIMATION_RES := 1080
-
-# MI Cam
-TARGET_USES_MIUI_CAMERA := true
-TARGET_INCLUDES_MIUI_CAMERA := true
-
-# Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_munch
 PRODUCT_DEVICE := munch
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_BRAND := POCO
-PRODUCT_MODEL := POCO F4
+PRODUCT_BRAND := Redmi
+PRODUCT_MODEL := 22021211RC
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
+# RisingOS
+WITH_GMS := true
+TARGET_CORE_GMS := false
+TARGET_CORE_GMS_EXTRAS := true
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
+TARGET_ENABLE_BLUR := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_HAS_UDFPS := false
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    RISING_CHIPSET="Snapdragon 870 5G" \
+    RISING_MAINTAINER="BayuArindra"
+	
 BUILD_FINGERPRINT := Redmi/munch/munch:13/RKQ1.211001.001/V816.0.4.0.ULMMIXM:user/release-keys
